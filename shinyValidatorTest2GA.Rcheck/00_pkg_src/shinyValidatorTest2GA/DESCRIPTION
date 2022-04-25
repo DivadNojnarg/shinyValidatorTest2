@@ -15,6 +15,6 @@ Suggests: DT, lubridate, pkgload, rmarkdown, shinyValidator, testthat
         (>= 3.0.0), vdiffr, withr
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2022-04-25 14:46:04 UTC; runner
+Packaged: 2022-04-25 15:29:21 UTC; runner
 Author: firstname lastname [aut, cre]
 Maintainer: firstname lastname <your@email.com>
