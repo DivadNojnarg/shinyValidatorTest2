@@ -83,7 +83,7 @@ Type 'q()' to quit R.
 > 
 > proc.time()
    user  system elapsed 
-  1.253   0.104   1.344 </div>
+  1.066   0.052   1.107 </div>
           </div>
         </div>
       </div>
@@ -189,22 +189,22 @@ $('[data-tab="crash-test"] .ribbon')
 $('[data-tab="coverage"] .ribbon')
      .popup({
        title   : 'Coverage',
-       content : 'The report shows noticed output differences found during unit testing. It is the business user responsibility to decide whether to accept the difference(s).'
+       content : 'Code coverage shows the amounts of code covered by unit tests. The higher the coverage, the higher the package reliability (assuming relevant unit tests).'
      });
 $('[data-tab="load-test"] .ribbon')
      .popup({
        title   : 'Load test',
-       content : 'Code coverage shows the amounts of code covered by unit tests. The higher the coverage, the higher the package reliability (assuming relevant unit tests).'
+       content : 'Load testing consists of checking whether the app can support multiple simultaneous sessions with reasonable performances. If you see a lot of blue area in the session tab, the app is likely not very well optimized.'
      });
 $('[data-tab="reactlog"] .ribbon')
      .popup({
        title   : 'Reactivity',
-       content : 'Load testing consists of checking whether the app can support multiple simultaneous sessions with reasonable performances. If you see a lot of blue area in the session tab, the app is likely not very well optimized.'
+       content : '{reactlog} represents the reactive graph of the Shiny app. It is useful to identify and fix reactivity-related issues.'
      });
 $('[data-tab="code-profile"] .ribbon')
      .popup({
        title   : 'Code profile',
-       content : '{reactlog} represents the reactive graph of the Shiny app. It is useful to identify and fix reactivity-related issues.'
+       content : '{profvis} runs the app and returns the time taken by the R code to finish. The lower the result, the higher the performances. It is useful to identify bottlenecks.'
      });
          </script>
   </body>
