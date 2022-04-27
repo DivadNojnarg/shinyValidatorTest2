@@ -34,7 +34,23 @@
 * checking S3 generic/method consistency ... OK
 * checking replacement functions ... OK
 * checking foreign function calls ... OK
-* checking R code for possible problems ... OK
+* checking R code for possible problems ... NOTE
+app_server: no visible binding for global variable ‘rnorm’
+  (/home/runner/work/shinyValidatorTest2/shinyValidatorTest2/public/shinyValidatorTest2GA.Rcheck/00_pkg_src/shinyValidatorTest2GA/R/app_server.R:10-17)
+app_server: no visible binding for global variable ‘runif’
+  (/home/runner/work/shinyValidatorTest2/shinyValidatorTest2/public/shinyValidatorTest2GA.Rcheck/00_pkg_src/shinyValidatorTest2GA/R/app_server.R:10-17)
+app_server: no visible binding for global variable ‘rlnorm’
+  (/home/runner/work/shinyValidatorTest2/shinyValidatorTest2/public/shinyValidatorTest2GA.Rcheck/00_pkg_src/shinyValidatorTest2GA/R/app_server.R:10-17)
+app_server: no visible binding for global variable ‘rexp’
+  (/home/runner/work/shinyValidatorTest2/shinyValidatorTest2/public/shinyValidatorTest2GA.Rcheck/00_pkg_src/shinyValidatorTest2GA/R/app_server.R:10-17)
+app_server: no visible global function definition for ‘hist’
+  (/home/runner/work/shinyValidatorTest2/shinyValidatorTest2/public/shinyValidatorTest2GA.Rcheck/00_pkg_src/shinyValidatorTest2GA/R/app_server.R:19)
+Undefined global functions or variables:
+  hist rexp rlnorm rnorm runif
+Consider adding
+  importFrom("graphics", "hist")
+  importFrom("stats", "rexp", "rlnorm", "rnorm", "runif")
+to your NAMESPACE file.
 * checking Rd files ... OK
 * checking Rd metadata ... OK
 * checking Rd cross-references ... OK
@@ -48,4 +64,4 @@
 * checking tests ... OK
   Running ‘testthat.R’
 * DONE
-Status: OK
+Status: 1 NOTE

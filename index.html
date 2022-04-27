@@ -51,7 +51,25 @@
           <i class="green check icon"></i>
           <div class="content">
             <div class="title">Checking</div>
-            <div class="description" style="white-space: pre-line;"></div>
+            <div class="description" style="white-space: pre-line;">
+              <div class="ui blue message">checking R code for possible problems ... NOTE
+app_server: no visible binding for global variable ‘rnorm’
+  (/home/runner/work/shinyValidatorTest2/shinyValidatorTest2/public/shinyValidatorTest2GA.Rcheck/00_pkg_src/shinyValidatorTest2GA/R/app_server.R:10-17)
+app_server: no visible binding for global variable ‘runif’
+  (/home/runner/work/shinyValidatorTest2/shinyValidatorTest2/public/shinyValidatorTest2GA.Rcheck/00_pkg_src/shinyValidatorTest2GA/R/app_server.R:10-17)
+app_server: no visible binding for global variable ‘rlnorm’
+  (/home/runner/work/shinyValidatorTest2/shinyValidatorTest2/public/shinyValidatorTest2GA.Rcheck/00_pkg_src/shinyValidatorTest2GA/R/app_server.R:10-17)
+app_server: no visible binding for global variable ‘rexp’
+  (/home/runner/work/shinyValidatorTest2/shinyValidatorTest2/public/shinyValidatorTest2GA.Rcheck/00_pkg_src/shinyValidatorTest2GA/R/app_server.R:10-17)
+app_server: no visible global function definition for ‘hist’
+  (/home/runner/work/shinyValidatorTest2/shinyValidatorTest2/public/shinyValidatorTest2GA.Rcheck/00_pkg_src/shinyValidatorTest2GA/R/app_server.R:19)
+Undefined global functions or variables:
+  hist rexp rlnorm rnorm runif
+Consider adding
+  importFrom("graphics", "hist")
+  importFrom("stats", "rexp", "rlnorm", "rnorm", "runif")
+to your NAMESPACE file.</div>
+            </div>
           </div>
         </div>
         <div class="link step">
@@ -83,7 +101,7 @@ Type 'q()' to quit R.
 > 
 > proc.time()
    user  system elapsed 
-  1.099   0.076   1.164 </div>
+  1.043   0.048   1.080 </div>
           </div>
         </div>
       </div>
