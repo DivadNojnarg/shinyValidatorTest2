@@ -10,7 +10,17 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # Your application UI logic 
     fluidPage(
-      h1("shinyValidatorTest2GA")
+      radioButtons(
+        "dist", 
+        "Distribution type:",
+        c(
+          "Normal" = "norm",
+          "Uniform" = "unif",
+          "Log-normal" = "lnorm",
+          "Exponential" = "exp"
+        )
+      ),
+      plotOutput("distPlot")
     )
   )
 }
@@ -28,7 +38,7 @@ golem_add_external_resources <- function() {
   add_resource_path(
     "www", app_sys("app/www")
   )
- 
+  
   tags$head(
     favicon(),
     bundle_resources(
